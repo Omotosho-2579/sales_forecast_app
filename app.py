@@ -1,3 +1,5 @@
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 import streamlit as st
 import pandas as pd
 import numpy as np
