@@ -1,5 +1,18 @@
 import os
+import sys
+import warnings
+
+# Suppress unnecessary warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+
+# Handle environment compatibility
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+os.environ['MPLCONFIGDIR'] = os.getcwd()
+
+# Workaround for Streamlit/PyTorch compatibility
+if not sys.warnoptions:
+    import warnings
+    warnings.simplefilter("ignore")
 import streamlit as st
 import pandas as pd
 import numpy as np

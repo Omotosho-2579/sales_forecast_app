@@ -1,5 +1,6 @@
 import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+os.environ['MPLCONFIGDIR'] = os.getcwd()
 import numpy as np
 import pandas as pd
 import torch
